@@ -10,7 +10,7 @@ import se.iths.stefan.springmessenger.model.Message;
 @Component
 @RequiredArgsConstructor
 public class MessageSubscriber {
-
+    //
     private final EmailSender sender;
 
 
