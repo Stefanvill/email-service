@@ -28,7 +28,7 @@ public class MessageSubscriber {
             System.out.println(mail);
         } catch (Exception e) {
             System.err.println("Failed to parse message: " + e.getMessage());
-            e.printStackTrace();
+            e.printStackTrace();//
         }
     }
 }
