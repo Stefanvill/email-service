@@ -28,6 +28,7 @@ public class MessageSubscriber {
                     + ". Totalpris är: " + order.getTotalPrice();
 
             sender.send(mail, order.getCustomerName());
+            System.out.println(mail);
         } catch (Exception e) {
             throw new RuntimeException("Failed to parse message", e);
         }
