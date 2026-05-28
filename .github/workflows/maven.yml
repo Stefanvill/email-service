@@ -41,5 +41,5 @@ jobs:
           context: .
           push: true
           tags: |
-            hakangleissman/email-service:latest
-            hakangleissman/email-service:${{ github.run_number }}
+            stefanvill/email-service:latest
+            stefanvill/email-service:${{ github.run_number }}
