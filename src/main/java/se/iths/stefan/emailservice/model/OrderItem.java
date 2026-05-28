@@ -9,7 +9,8 @@ import lombok.ToString;
 @ToString
 public class OrderItem {
     private String name;
-    private double price;
+    private Double price;
+    private int quantity;
 }
 
 
