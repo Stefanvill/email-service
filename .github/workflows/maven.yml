@@ -39,5 +39,5 @@ jobs:
           context: .
           push: true
           tags: |
-            stefanvill/email-services:latest
+            stefanvill/email-services:email-service-1.0.0.jar
             stefanvill/email-services:${{ github.run_number }}
