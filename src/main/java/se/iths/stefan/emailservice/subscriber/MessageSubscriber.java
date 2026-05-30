@@ -5,6 +5,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 import se.iths.stefan.emailservice.config.RabbitConfig;
 import se.iths.stefan.emailservice.model.Order;
+import se.iths.stefan.springmessenger.messaging.EmailSender;
 import tools.jackson.databind.ObjectMapper;
 
 @Component
@@ -12,6 +13,7 @@ import tools.jackson.databind.ObjectMapper;
 public class MessageSubscriber {
 
     private final ObjectMapper objectMapper;
+    private final EmailSender sender;
 
     @RabbitListener(queues = RabbitConfig.QUEUE)
     public void subscribe(String message) {
@@ -26,9 +28,10 @@ public class MessageSubscriber {
                     + ". Totalpris är: " + order.getTotalPrice();
 
             System.out.println(mail);
+            sender.send(mail, order.getCustomerName());
         } catch (Exception e) {
             System.err.println("Failed to parse message: " + e.getMessage());
-            e.printStackTrace();//
+            e.printStackTrace();
         }
     }
 }
