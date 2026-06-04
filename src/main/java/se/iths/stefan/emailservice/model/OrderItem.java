@@ -8,7 +8,6 @@ import lombok.ToString;
 @Setter
 @ToString
 public class OrderItem {
-    private long id;
     private String name;
     private Double price;
     private int quantity;
