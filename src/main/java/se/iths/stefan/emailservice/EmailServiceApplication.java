@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan(basePackages = {
         "se.iths.stefan.emailservice",
-        "se.iths.stefan.springmessenger"  // Add this
+        "se.iths.stefan.springmessenger"
 })
 public class EmailServiceApplication {
 

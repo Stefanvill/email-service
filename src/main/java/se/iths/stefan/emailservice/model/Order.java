@@ -10,6 +10,7 @@ import java.util.List;
 @Getter
 @Setter
 public class Order {
+    private long id;
     private LocalDateTime orderDate;
     private String customerName;
     private List<OrderItem> orderItems;
